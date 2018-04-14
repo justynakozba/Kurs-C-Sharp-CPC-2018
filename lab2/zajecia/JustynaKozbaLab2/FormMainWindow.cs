@@ -22,6 +22,7 @@ namespace JustynaKozbaLab2
             // i się zamyka
            // Close();
         }
+
         /// <summary>
         /// Przycisk tworzący nowe okno
         /// </summary>
@@ -44,13 +45,18 @@ namespace JustynaKozbaLab2
         /// <param name="e"></param>
         private void buttonShow_Click(object sender, EventArgs e)
         {
-            //tworzymy obiekt
+            //Tworzymy obiekty
             Horse horse = new Horse("Bojack", "Black");
+            Unicorn unicorn = new Unicorn();
 
-            //doklejamy informacje o objekcie oraz dodajemy nową linię 
+            //Doklejamy informacje o objekcie oraz dodajemy nową linię 
             textBoxConsol.Text += horse + Environment.NewLine;
 
-            // dodajemy inforamje z metody DoSomething
+            // Wpisanie losowej prędkości do obiektów
+            textBoxConsol.Text += "Horse max speed: " + horse.GetCurrentSpeed() + Environment.NewLine;
+            textBoxConsol.Text += "Unicorn max speed: " +unicorn.GetCurrentSpeed() + Environment.NewLine;
+
+            //Dodajemy inforamje z metody DoSomething
             textBoxConsol.Text += horse.DoSomething() + Environment.NewLine;
 
         }

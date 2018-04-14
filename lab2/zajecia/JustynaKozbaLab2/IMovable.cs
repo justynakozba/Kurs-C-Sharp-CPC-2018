@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace JustynaKozbaLab2
 {
     /// <summary>
-    /// interfejs dla klasy, która może się poruszać
+    /// Interfejs dla klasy, która może się poruszać
     /// </summary>
     interface IMovable
     { 
-        // metoda idź
+        // Metoda idź
         string Go();
     }
 }

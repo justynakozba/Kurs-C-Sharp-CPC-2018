@@ -19,6 +19,10 @@ namespace JustynaKozbaLab2
         /// </summary>
         public string FavouriteColor { get; set; }
 
+
+        /// <summary>
+        /// Konstruktor bezparametryczny 
+        /// </summary>
         public Horse()
         {
 
@@ -27,10 +31,11 @@ namespace JustynaKozbaLab2
         /// <summary>
         /// Konstruktor parametryczny
         /// </summary>
-        /// <param name="newName"></param>
-        /// <param name="FavouriteColor"></param>
+        /// <param name="newName">Nowe imię konia</param>
+        /// <param name="FavouriteColor">Nowy ulubiony kolor</param>
         public Horse(String newName, string favouriteColor)
         {
+            MaxSpeed = 420;
             this.Name = newName;
             this.FavouriteColor = favouriteColor;
         }
@@ -53,13 +58,12 @@ namespace JustynaKozbaLab2
             return $"My name is {Name} and my favourite color is {FavouriteColor}";
         }
 
-
         /// <summary>
-        /// 
+        /// Implementacja metody "Go" w klasie Horse
         /// </summary>
         public string Go()
         {
-            return $"M,m going";
+            return $"I,m going";
          
         }
     }

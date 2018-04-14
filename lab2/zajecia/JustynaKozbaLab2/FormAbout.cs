@@ -17,14 +17,14 @@ namespace JustynaKozbaLab2
             InitializeComponent();
         }
 
+        /// <summary>
+        /// wstawienie tekstu po kliknięciu przyciksu Nowe Okno
+        /// </summary>
+        /// <param name="text"></param>
         public void setLabelText(string text)
         {
             this.labelNewText.Text = text;
         }
    
-        private void FormAbout_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

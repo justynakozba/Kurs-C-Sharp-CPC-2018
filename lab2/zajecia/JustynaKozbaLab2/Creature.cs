@@ -8,10 +8,29 @@ namespace JustynaKozbaLab2
 {
     abstract class Creature
     {
-        public int MaxSpeed { get; set; }
-        Random random = new Random();
+        /// <summary>
+        /// Imię stworzenia
+        /// </summary>
+        public string Name { get; set; }
 
-        public virtual int GetCurrentSpped()
+        /// <summary>
+        /// Ulubiony kolor
+        /// </summary>
+        public string FavouriteColor { get; set; }
+
+        /// <summary>
+        /// Maksymalna prędkość
+        /// </summary>
+        public int MaxSpeed { get; set; }
+
+        // nowy obiekt z (int)DateTime.Now.Ticks
+        Random random = new Random((int)DateTime.Now.Ticks);
+
+        /// <summary>
+        /// Funkcja zwwracająca losową predkość z przedziału od 0 do MaxSpeed
+        /// </summary>
+        /// <returns></returns>
+        public virtual int GetCurrentSpeed()
         {
             int currentSpeed = random.Next(MaxSpeed);
             return currentSpeed;
