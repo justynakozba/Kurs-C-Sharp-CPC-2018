@@ -11,10 +11,10 @@ using System.Data.SqlClient;
 
 namespace JustynaKozbaLab3
 {
-    public partial class Form1 : Form
+    public partial class Pizzeria : Form
     {
         SqlConnection connection;
-        public Form1()
+        public Pizzeria()
         {
             InitializeComponent();
             connection = new SqlConnection(@"Data Source=DESKTOP-VR1D9PV; database= Pzzeria; Trusted_Connection=yes");
@@ -27,17 +27,15 @@ namespace JustynaKozbaLab3
         /// <param name="e"></param>
         private void buttonShow_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter adapter = new SqlDataAdapter($"SELECT * FROM Pizzas WHERE Price > 0{textBox1.Text}", connection);
+            // metoda odpwiadająca za wyświetlenie tylko tych pizz które mają cenę większą od podanej w TextBoxPrice
+            SqlDataAdapter adapter = new SqlDataAdapter($"SELECT * FROM Pizzas WHERE Price > 0{textBoxPrice.Text}", connection);
             DataTable table = new DataTable();
 
             adapter.Fill(table);
 
-            dataGridView1.DataSource = table;
+            dataGridViewTable.DataSource = table;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 }

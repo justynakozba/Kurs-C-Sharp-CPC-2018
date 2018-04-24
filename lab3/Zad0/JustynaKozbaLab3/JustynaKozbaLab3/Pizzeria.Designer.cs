@@ -1,6 +1,6 @@
 ﻿namespace JustynaKozbaLab3
 {
-    partial class Form1
+    partial class Pizzeria
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.labelName = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTable = new System.Windows.Forms.DataGridView();
             this.buttonShow = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.buttonShow1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTable)).BeginInit();
             this.SuspendLayout();
             // 
             // labelName
@@ -46,14 +46,14 @@
             this.labelName.TabIndex = 0;
             this.labelName.Text = "Justyna Koźba";
             // 
-            // dataGridView1
+            // dataGridViewTable
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 82);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(517, 311);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridViewTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTable.Location = new System.Drawing.Point(21, 82);
+            this.dataGridViewTable.Name = "dataGridViewTable";
+            this.dataGridViewTable.RowTemplate.Height = 28;
+            this.dataGridViewTable.Size = new System.Drawing.Size(517, 311);
+            this.dataGridViewTable.TabIndex = 1;
             // 
             // buttonShow
             // 
@@ -65,13 +65,12 @@
             this.buttonShow.UseVisualStyleBackColor = true;
             this.buttonShow.Click += new System.EventHandler(this.buttonShow_Click);
             // 
-            // textBox1
+            // textBoxPrice
             // 
-            this.textBox1.Location = new System.Drawing.Point(547, 168);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 25);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBoxPrice.Location = new System.Drawing.Point(547, 168);
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(100, 25);
+            this.textBoxPrice.TabIndex = 3;
             // 
             // buttonShow1
             // 
@@ -88,14 +87,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 405);
             this.Controls.Add(this.buttonShow1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.buttonShow);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewTable);
             this.Controls.Add(this.labelName);
             this.Font = new System.Drawing.Font("Monotype Corsiva", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,9 +103,9 @@
         #endregion
 
         private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewTable;
         private System.Windows.Forms.Button buttonShow;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.Button buttonShow1;
     }
 }
