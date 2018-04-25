@@ -40,9 +40,5 @@ namespace JustynaKozbaLab3Zad1
 
         }
 
-        private void AddBook_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

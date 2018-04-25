@@ -149,7 +149,7 @@ namespace JustynaKozbaLab3Zad1
                 SqlConnector.sql.RemoveData("UPDATE Authors set AuthorLastName ='" + textBoxEditLastName.Text + "' WHERE id =" + id);
             }
 
-            SqlConnector.sql.ViewDataSql("SELECT* FROM Authors", dataGridViewLibrary);
+            SqlConnector.sql.ViewDataSql("SELECT * FROM Books JOIN Authors ON Books.IdAuthor = Authors.id", dataGridViewLibrary);
         }
 
         /// <summary>
@@ -164,7 +164,7 @@ namespace JustynaKozbaLab3Zad1
 
         /// <summary>
         /// Przycisk odpowiadający za edycję danych Wydawnictwa w tabeli, poprzez kliknięcie wybranej pozycji wyświetlonej tabeli
-        /// należy wpisać Nazwę i E-mail w odpowiednim TexBoxie
+        /// należy wpisać Nazwę i Email w odpowiednim TexBoxie
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -181,7 +181,75 @@ namespace JustynaKozbaLab3Zad1
                 SqlConnector.sql.RemoveData("UPDATE PublishingHouse set Email ='" + textBoxEditPublishingHouseEmail.Text + "' WHERE id =" + id);
             }
 
-            SqlConnector.sql.ViewDataSql("SELECT * FROM PublishingHouse", dataGridViewLibrary);
+            SqlConnector.sql.ViewDataSql("SELECT * FROM Books JOIN PublishingHouse ON Books.IdPublishingHouse = PublishingHouse.id", dataGridViewLibrary);
+        }
+
+        /// <summary>
+        /// Metoda umożliwiająca edycję czytelników, ich imiona, nazwiska, PESEL oraz numer karty bibliotecznej
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonEditReader_Click(object sender, EventArgs e)
+        {
+            String id = dataGridViewLibrary.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
+            if (textBoxEditReaderName.Text != "")
+            {
+                SqlConnector.sql.ExecuteQuerry("UPDATE Readers set Name ='" + textBoxEditReaderName.Text + "' WHERE id =" + id);
+            }
+
+            if (textBoxEditReaderLastName.Text != "")
+            {
+                SqlConnector.sql.RemoveData("UPDATE Readers set LastName='" + textBoxEditReaderLastName.Text + "' WHERE id =" + id);
+            }
+
+            if (textBoxEditReaderPesel.Text != "")
+            {
+                SqlConnector.sql.RemoveData("UPDATE Readers set PESEL='" + textBoxEditReaderPesel.Text + "' WHERE id =" + id);
+            }
+
+            if (textBoxEditReaderCardNumber.Text != "")
+            {
+                SqlConnector.sql.RemoveData("UPDATE Readers set CardNumber='" + textBoxEditReaderCardNumber.Text + "' WHERE id =" + id);
+            }
+
+            SqlConnector.sql.ViewDataSql("SELECT * FROM Readers", dataGridViewLibrary);
+        }
+
+        /// <summary>
+        /// Metoda odpowiadająca za wyświetlenie wszystkich czytelników
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonShowReaders_Click(object sender, EventArgs e)
+        {
+            SqlConnector.sql.ViewDataSql("SELECT * FROM Readers", dataGridViewLibrary);
+        }
+
+        private void buttonAddReader_Click(object sender, EventArgs e)
+        {
+            AddReader formAbout = new AddReader();
+            formAbout.Show();
+        }
+
+        /// <summary>
+        /// Metoda odpowiadająca za usuwanie czytelnika
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonRemoveReader_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String id = dataGridViewLibrary.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
+
+                SqlConnector.sql.RemoveData("delete Readers where id=" + id);
+                SqlConnector.sql.ViewDataSql("SELECT * FROM Readers", dataGridViewLibrary);
+
+            }
+            catch
+            {
+                MessageBox.Show("Usuwanie zakończonie niepowodzeniem! ");
+            }
         }
     }
 }

@@ -62,6 +62,19 @@
             this.buttonEditPublishingHouse = new System.Windows.Forms.Button();
             this.buttonShowAuthors = new System.Windows.Forms.Button();
             this.buttonShowPublishingHouse = new System.Windows.Forms.Button();
+            this.buttonShowReaders = new System.Windows.Forms.Button();
+            this.textBoxEditReaderLastName = new System.Windows.Forms.TextBox();
+            this.labelReaderName = new System.Windows.Forms.Label();
+            this.labelReaderLastName = new System.Windows.Forms.Label();
+            this.labelEditReader = new System.Windows.Forms.Label();
+            this.textBoxEditReaderName = new System.Windows.Forms.TextBox();
+            this.buttonEditReader = new System.Windows.Forms.Button();
+            this.textBoxEditReaderCardNumber = new System.Windows.Forms.TextBox();
+            this.labelReaderCardNumber = new System.Windows.Forms.Label();
+            this.textBoxEditReaderPesel = new System.Windows.Forms.TextBox();
+            this.labelReaderPesel = new System.Windows.Forms.Label();
+            this.buttonAddReader = new System.Windows.Forms.Button();
+            this.buttonRemoveReader = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLibrary)).BeginInit();
             this.SuspendLayout();
             // 
@@ -415,6 +428,138 @@
             this.buttonShowPublishingHouse.UseVisualStyleBackColor = true;
             this.buttonShowPublishingHouse.Click += new System.EventHandler(this.buttonShowPublishingHouse_Click);
             // 
+            // buttonShowReaders
+            // 
+            this.buttonShowReaders.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonShowReaders.Location = new System.Drawing.Point(1388, 548);
+            this.buttonShowReaders.Name = "buttonShowReaders";
+            this.buttonShowReaders.Size = new System.Drawing.Size(217, 94);
+            this.buttonShowReaders.TabIndex = 51;
+            this.buttonShowReaders.Text = "Wyświetl wszystkich czytelników";
+            this.buttonShowReaders.UseVisualStyleBackColor = true;
+            this.buttonShowReaders.Click += new System.EventHandler(this.buttonShowReaders_Click);
+            // 
+            // textBoxEditReaderLastName
+            // 
+            this.textBoxEditReaderLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxEditReaderLastName.Location = new System.Drawing.Point(1409, 796);
+            this.textBoxEditReaderLastName.Name = "textBoxEditReaderLastName";
+            this.textBoxEditReaderLastName.Size = new System.Drawing.Size(185, 35);
+            this.textBoxEditReaderLastName.TabIndex = 50;
+            // 
+            // labelReaderName
+            // 
+            this.labelReaderName.AutoSize = true;
+            this.labelReaderName.BackColor = System.Drawing.Color.Transparent;
+            this.labelReaderName.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelReaderName.Location = new System.Drawing.Point(1324, 725);
+            this.labelReaderName.Name = "labelReaderName";
+            this.labelReaderName.Size = new System.Drawing.Size(50, 28);
+            this.labelReaderName.TabIndex = 49;
+            this.labelReaderName.Text = "Imię";
+            // 
+            // labelReaderLastName
+            // 
+            this.labelReaderLastName.AutoSize = true;
+            this.labelReaderLastName.BackColor = System.Drawing.Color.Transparent;
+            this.labelReaderLastName.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelReaderLastName.Location = new System.Drawing.Point(1286, 800);
+            this.labelReaderLastName.Name = "labelReaderLastName";
+            this.labelReaderLastName.Size = new System.Drawing.Size(102, 28);
+            this.labelReaderLastName.TabIndex = 48;
+            this.labelReaderLastName.Text = "Nazwisko";
+            // 
+            // labelEditReader
+            // 
+            this.labelEditReader.AutoSize = true;
+            this.labelEditReader.BackColor = System.Drawing.Color.Transparent;
+            this.labelEditReader.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelEditReader.Location = new System.Drawing.Point(1404, 662);
+            this.labelEditReader.Name = "labelEditReader";
+            this.labelEditReader.Size = new System.Drawing.Size(166, 28);
+            this.labelEditReader.TabIndex = 47;
+            this.labelEditReader.Text = "Edytuj czytelnika";
+            // 
+            // textBoxEditReaderName
+            // 
+            this.textBoxEditReaderName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxEditReaderName.Location = new System.Drawing.Point(1409, 725);
+            this.textBoxEditReaderName.Name = "textBoxEditReaderName";
+            this.textBoxEditReaderName.Size = new System.Drawing.Size(185, 35);
+            this.textBoxEditReaderName.TabIndex = 46;
+            // 
+            // buttonEditReader
+            // 
+            this.buttonEditReader.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonEditReader.Location = new System.Drawing.Point(1420, 1004);
+            this.buttonEditReader.Name = "buttonEditReader";
+            this.buttonEditReader.Size = new System.Drawing.Size(154, 50);
+            this.buttonEditReader.TabIndex = 45;
+            this.buttonEditReader.Text = "Edytuj";
+            this.buttonEditReader.UseVisualStyleBackColor = true;
+            this.buttonEditReader.Click += new System.EventHandler(this.buttonEditReader_Click);
+            // 
+            // textBoxEditReaderCardNumber
+            // 
+            this.textBoxEditReaderCardNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxEditReaderCardNumber.Location = new System.Drawing.Point(1409, 930);
+            this.textBoxEditReaderCardNumber.Name = "textBoxEditReaderCardNumber";
+            this.textBoxEditReaderCardNumber.Size = new System.Drawing.Size(185, 35);
+            this.textBoxEditReaderCardNumber.TabIndex = 53;
+            // 
+            // labelReaderCardNumber
+            // 
+            this.labelReaderCardNumber.AutoSize = true;
+            this.labelReaderCardNumber.BackColor = System.Drawing.Color.Transparent;
+            this.labelReaderCardNumber.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelReaderCardNumber.Location = new System.Drawing.Point(1258, 937);
+            this.labelReaderCardNumber.Name = "labelReaderCardNumber";
+            this.labelReaderCardNumber.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelReaderCardNumber.Size = new System.Drawing.Size(121, 28);
+            this.labelReaderCardNumber.TabIndex = 52;
+            this.labelReaderCardNumber.Text = "Numer karty";
+            // 
+            // textBoxEditReaderPesel
+            // 
+            this.textBoxEditReaderPesel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxEditReaderPesel.Location = new System.Drawing.Point(1409, 874);
+            this.textBoxEditReaderPesel.Name = "textBoxEditReaderPesel";
+            this.textBoxEditReaderPesel.Size = new System.Drawing.Size(185, 35);
+            this.textBoxEditReaderPesel.TabIndex = 55;
+            // 
+            // labelReaderPesel
+            // 
+            this.labelReaderPesel.AutoSize = true;
+            this.labelReaderPesel.BackColor = System.Drawing.Color.Transparent;
+            this.labelReaderPesel.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelReaderPesel.Location = new System.Drawing.Point(1308, 878);
+            this.labelReaderPesel.Name = "labelReaderPesel";
+            this.labelReaderPesel.Size = new System.Drawing.Size(80, 28);
+            this.labelReaderPesel.TabIndex = 54;
+            this.labelReaderPesel.Text = "PESEL";
+            // 
+            // buttonAddReader
+            // 
+            this.buttonAddReader.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonAddReader.Location = new System.Drawing.Point(1388, 447);
+            this.buttonAddReader.Name = "buttonAddReader";
+            this.buttonAddReader.Size = new System.Drawing.Size(217, 67);
+            this.buttonAddReader.TabIndex = 56;
+            this.buttonAddReader.Text = "Dodaj nowego czytelnika";
+            this.buttonAddReader.UseVisualStyleBackColor = true;
+            this.buttonAddReader.Click += new System.EventHandler(this.buttonAddReader_Click);
+            // 
+            // buttonRemoveReader
+            // 
+            this.buttonRemoveReader.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonRemoveReader.Location = new System.Drawing.Point(1638, 447);
+            this.buttonRemoveReader.Name = "buttonRemoveReader";
+            this.buttonRemoveReader.Size = new System.Drawing.Size(201, 67);
+            this.buttonRemoveReader.TabIndex = 57;
+            this.buttonRemoveReader.Text = "Usuń czytelnika";
+            this.buttonRemoveReader.UseVisualStyleBackColor = true;
+            this.buttonRemoveReader.Click += new System.EventHandler(this.buttonRemoveReader_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -422,6 +567,19 @@
             this.BackgroundImage = global::JustynaKozbaLab3Zad1.Properties.Resources.background_compare;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1932, 1075);
+            this.Controls.Add(this.buttonRemoveReader);
+            this.Controls.Add(this.buttonAddReader);
+            this.Controls.Add(this.textBoxEditReaderPesel);
+            this.Controls.Add(this.labelReaderPesel);
+            this.Controls.Add(this.textBoxEditReaderCardNumber);
+            this.Controls.Add(this.labelReaderCardNumber);
+            this.Controls.Add(this.buttonShowReaders);
+            this.Controls.Add(this.textBoxEditReaderLastName);
+            this.Controls.Add(this.labelReaderName);
+            this.Controls.Add(this.labelReaderLastName);
+            this.Controls.Add(this.labelEditReader);
+            this.Controls.Add(this.textBoxEditReaderName);
+            this.Controls.Add(this.buttonEditReader);
             this.Controls.Add(this.buttonShowPublishingHouse);
             this.Controls.Add(this.buttonShowAuthors);
             this.Controls.Add(this.textBoxEditPublishingHouseEmail);
@@ -500,6 +658,19 @@
         private System.Windows.Forms.Button buttonEditPublishingHouse;
         private System.Windows.Forms.Button buttonShowAuthors;
         private System.Windows.Forms.Button buttonShowPublishingHouse;
+        private System.Windows.Forms.Button buttonShowReaders;
+        private System.Windows.Forms.TextBox textBoxEditReaderLastName;
+        private System.Windows.Forms.Label labelReaderName;
+        private System.Windows.Forms.Label labelReaderLastName;
+        private System.Windows.Forms.Label labelEditReader;
+        private System.Windows.Forms.TextBox textBoxEditReaderName;
+        private System.Windows.Forms.Button buttonEditReader;
+        private System.Windows.Forms.TextBox textBoxEditReaderCardNumber;
+        private System.Windows.Forms.Label labelReaderCardNumber;
+        private System.Windows.Forms.TextBox textBoxEditReaderPesel;
+        private System.Windows.Forms.Label labelReaderPesel;
+        private System.Windows.Forms.Button buttonAddReader;
+        private System.Windows.Forms.Button buttonRemoveReader;
     }
 }
 
