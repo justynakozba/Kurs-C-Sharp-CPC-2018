@@ -12,7 +12,7 @@ namespace JustynaKozbaLab3Zad1
 {
     public partial class MainWindow : Form
     {
-     
+
         /// <summary>
         /// Konstruktor klasy Search
         /// </summary>
@@ -61,7 +61,7 @@ namespace JustynaKozbaLab3Zad1
         /// <param name="e"></param>
         private void buttonSearchByTittle_Click(object sender, EventArgs e)
         {
-            SqlConnector.sql.ViewDataSql("SELECT * FROM Books JOIN Authors ON Books.IdAuthor = Authors.id where Title like '"+ textBoxSearchByTittle.Text+"'", dataGridViewLibrary);
+            SqlConnector.sql.ViewDataSql("SELECT * FROM Books JOIN Authors ON Books.IdAuthor = Authors.id where Title like '" + textBoxSearchByTittle.Text + "'", dataGridViewLibrary);
 
         }
 
@@ -73,7 +73,7 @@ namespace JustynaKozbaLab3Zad1
         /// <param name="e"></param>
         private void buttonSearchPublishingHouse_Click(object sender, EventArgs e)
         {
-            SqlConnector.sql.ViewDataSql("SELECT Title, InternationalStandardBookNumber,AuthorName, AuthorLastName, Name FROM Books JOIN Authors ON Books.IdAuthor = Authors.id JOIN PublishingHouse on Books.IdPublishingHouse = PublishingHouse.id where  Name ='" +textBoxSearchPublishingHouse.Text + "'", dataGridViewLibrary);
+            SqlConnector.sql.ViewDataSql("SELECT Title, InternationalStandardBookNumber,AuthorName, AuthorLastName, Name FROM Books JOIN Authors ON Books.IdAuthor = Authors.id JOIN PublishingHouse on Books.IdPublishingHouse = PublishingHouse.id where  Name ='" + textBoxSearchPublishingHouse.Text + "'", dataGridViewLibrary);
 
         }
 
@@ -99,25 +99,89 @@ namespace JustynaKozbaLab3Zad1
         }
 
         /// <summary>
-        /// Przycisk odpowiadający za edycję danych w tabeli, poprzez kliknięcie wybranej pozycji w wyśiwtlonej tabeli
-        /// należy wpisać w odpowiednim TexBoxie informacje jakie chce się edytować
+        /// Przycisk odpowiadający za edycję danych Ksiązki w tabeli, poprzez kliknięcie wybranej pozycji w wyświetlonej tabeli
+        /// należy wpisać zmieniony tytuł książki oraz numer ISBN w odpowiednim TexBoxie 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void buttonEditBook_Click(object sender, EventArgs e)
         {
             String id = dataGridViewLibrary.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
-            if (textBoxEditTitle.Text != "")
+            if (textBoxEditBookTitle.Text != "")
             {
-                SqlConnector.sql.ExecuteQuerry("UPDATE Books set Title ='" + textBoxEditTitle.Text + "' WHERE id =" + id);
+                SqlConnector.sql.ExecuteQuerry("UPDATE Books set Title ='" + textBoxEditBookTitle.Text + "' WHERE id =" + id);
             }
 
-             if (textBoxEditNumber.Text != "")
-             {
-                  SqlConnector.sql.RemoveData("UPDATE Books set InternationalStandardBookNumber ='" + textBoxEditNumber.Text + "' WHERE id =" + id);
-             }
+            if (textBoxEditBookNumber.Text != "")
+            {
+                SqlConnector.sql.RemoveData("UPDATE Books set InternationalStandardBookNumber ='" + textBoxEditBookNumber.Text + "' WHERE id =" + id);
+            }
 
             SqlConnector.sql.ViewDataSql("SELECT* FROM Books", dataGridViewLibrary);
+        }
+
+        /// <summary>
+        /// Przycisk odpowiadający za wyświetlenie wsytskich autorów
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonShowAuthors_Click(object sender, EventArgs e)
+        {
+            SqlConnector.sql.ViewDataSql("SELECT * FROM Authors", dataGridViewLibrary);
+        }
+
+        /// <summary>
+        /// Przycisk odpowiadający za edycję danych Autora w tabeli, poprzez kliknięcie wybranej pozycji wyświetlonej tabeli
+        /// należy wpisać Imię i Nazwisko w odpowiednim TexBoxie
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonEditAuthor_Click(object sender, EventArgs e)
+        {
+            String id = dataGridViewLibrary.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
+            if (textBoxEditName.Text != "")
+            {
+                SqlConnector.sql.ExecuteQuerry("UPDATE Authors set AuthorName ='" + textBoxEditName.Text + "' WHERE id =" + id);
+            }
+
+            if (textBoxEditLastName.Text != "")
+            {
+                SqlConnector.sql.RemoveData("UPDATE Authors set AuthorLastName ='" + textBoxEditLastName.Text + "' WHERE id =" + id);
+            }
+
+            SqlConnector.sql.ViewDataSql("SELECT* FROM Authors", dataGridViewLibrary);
+        }
+
+        /// <summary>
+        /// Przycisk odpowiadający za wyświetlenie wszytskich wydawnictw
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonShowPublishingHouse_Click(object sender, EventArgs e)
+        {
+            SqlConnector.sql.ViewDataSql("SELECT * FROM PublishingHouse", dataGridViewLibrary);
+        }
+
+        /// <summary>
+        /// Przycisk odpowiadający za edycję danych Wydawnictwa w tabeli, poprzez kliknięcie wybranej pozycji wyświetlonej tabeli
+        /// należy wpisać Nazwę i E-mail w odpowiednim TexBoxie
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonEditPublishingHouse_Click(object sender, EventArgs e)
+        {
+            String id = dataGridViewLibrary.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
+            if (textBoxEditPublishingHouseName.Text != "")
+            {
+                SqlConnector.sql.ExecuteQuerry("UPDATE PublishingHouse set Name ='" + textBoxEditPublishingHouseName.Text + "' WHERE id =" + id);
+            }
+
+            if (textBoxEditPublishingHouseEmail.Text != "")
+            {
+                SqlConnector.sql.RemoveData("UPDATE PublishingHouse set Email ='" + textBoxEditPublishingHouseEmail.Text + "' WHERE id =" + id);
+            }
+
+            SqlConnector.sql.ViewDataSql("SELECT * FROM PublishingHouse", dataGridViewLibrary);
         }
     }
 }
