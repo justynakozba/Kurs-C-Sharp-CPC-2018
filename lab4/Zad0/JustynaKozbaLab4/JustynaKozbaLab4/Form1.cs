@@ -34,6 +34,13 @@ namespace JustynaKozbaLab4
             GetAllAboutGamesToDataGridView();
         }
 
+        //dataGridViewGames -> w danym dataGridView
+        //.DataSource <- jako zrodlo danych do wyswietlania
+        // = Games <- udwolujemy sie do repozytorium gier
+        // GetAll() <- pobieramy wszystkie gry z bazy
+        // .Select( <- definujemy, jak bedzie wyglowac dane w dataGridView
+        // x => new {tutaj opis parametrow} <- ten 'x' mozna rozumiec jako "kadzy pojedynczy obiekt"
+        // .ToList() <- zrobi to liste gier , co umozliwi wyswietlanie w dataGridView
         private void GetAllAboutGamesToDataGridView()
         {
             dataGridViewGames.DataSource = Games.GetAll().Select(
@@ -52,7 +59,9 @@ namespace JustynaKozbaLab4
         {
             string name = textBoxName.Text;
             string producer = textBoxProducer.Text;
-            if(name!=String.Empty && producer !=String.Empty)
+            //sprawdzanie,czy sa podane przez uzywkownika wszystkie wymagane pola (w naszym przypadku ich jest dwa)
+            // jest to potrzebne, bo jest [Required] przy Name oraz Producer w klasie Game
+            if (name!=String.Empty && producer !=String.Empty)
             {
                 Game newGame = new Game()
                 {
@@ -68,5 +77,7 @@ namespace JustynaKozbaLab4
             }
 
         }
+
+
     }
 }
