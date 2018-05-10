@@ -1,0 +1,26 @@
+﻿@model List<CarsApp.DbContext.Car>
+
+@{
+    ViewBag.Title = "Exercise3";
+}
+
+<h2>Exercise3</h2>
+
+<table class=" table table-striped">
+    <tr>
+        <th>Id </th>
+        <th>Model </th>
+        <th>Manufacturer</th>
+        <th>Price</th>
+    </tr>
+
+    @foreach (var car in Model)
+    {
+        <tr>
+            <th>@car.CarId </th>
+            <th>@car.Model </th>
+            <th>@car.Manufacturer </th>
+            <th>@car.Price </th>
+        </tr>
+    }
+</table>
