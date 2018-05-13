@@ -1,20 +1,9 @@
 ﻿@model JustynaKozbaLab5Zad1.Models.ContactForm
 
-@{
-    ViewBag.Title = "Strona logowania";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-<!-- Zaimportowanie akrusza stylów css dla tej strony, arkusz stylów FormStyle.css zawarty w folderze Content-->
-@section Styles {
-    <link href="~/Content/FormStyle.css" rel="stylesheet" />
-}
-
-<h2></h2>
-@using (Html.BeginForm("Create", "Contact", FormMethod.Post))
+@using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
-
+    
     <div class="form-horizontal">
         <h4>ContactForm</h4>
         <hr />
@@ -54,4 +43,3 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
-

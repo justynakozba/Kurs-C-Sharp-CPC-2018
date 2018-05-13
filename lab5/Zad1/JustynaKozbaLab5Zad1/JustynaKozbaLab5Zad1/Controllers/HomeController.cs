@@ -95,20 +95,7 @@ namespace JustynaKozbaLab5Zad1.Controllers
         /// </summary>
         /// <param name="contactForm"></param>
         /// <returns></returns>
-        public ActionResult SubmitContactForm(ContactForm contactForm)
-        {
-            try
-            {
-                TempData["msg"] = "<script>alert('Change succesfully');</script>";
-                return RedirectToAction("Index");
-            }
-
-            catch
-            {
-                return View(contactForm);
-            }
-            
-
-        }
+       
+        
     }
 }

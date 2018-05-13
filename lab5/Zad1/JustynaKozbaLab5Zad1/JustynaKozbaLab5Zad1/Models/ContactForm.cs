@@ -16,7 +16,6 @@ namespace JustynaKozbaLab5Zad1.Models
         public string FirstName { get; set; }
         [MaxLength(40)]
         public string LastName { get; set; }
-        [MaxLength(25, ErrorMessage ="Hasło nie może być dłuższe niż 25 znaków")][MinLength(10, ErrorMessage = "Hasło nie może być krótsze niż 10 znaków")]
         public string Password { get; set; }
 
     }

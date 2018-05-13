@@ -1,0 +1,45 @@
+﻿@model IEnumerable<JustynaKozbaLab5Zad1.Models.ContactForm>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<!--Automatycznie wygenerowany widok i zmodyfikowany tak aby odpowiednio pobierał 
+    do kontrolek numer elementu z kolekcji-->
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th></th>
+    </tr>
+
+    @{ var i = 0;}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = i }) |
+                @Html.ActionLink("Details", "Details", new { id = i }) |
+                @Html.ActionLink("Delete", "Delete", new { id = i })
+            </td>
+        </tr>
+        i++;
+    }
+
+</table>
