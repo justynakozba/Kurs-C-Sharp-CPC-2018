@@ -72,7 +72,16 @@ namespace CarsApp.Controllers
         /// <returns></returns>
         public ActionResult SubmitContactForm(ContactForm contactForm)
         {
-            return View(contactForm);
+            try
+
+            {
+                return Content("Hi there!");
+            }
+            catch
+            {
+                return View(contactForm);
+            }
+            ;
         }
     }
 }

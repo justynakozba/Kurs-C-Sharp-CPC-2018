@@ -6,7 +6,7 @@
 
 <h2>Exercise5</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("SubmitContactForm", "Home", FormMethod.Post)) 
 {
     @Html.AntiForgeryToken()
     
