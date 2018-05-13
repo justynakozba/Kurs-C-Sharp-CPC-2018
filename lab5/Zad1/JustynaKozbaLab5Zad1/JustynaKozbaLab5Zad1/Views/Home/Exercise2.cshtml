@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "Exercise4";
+}
+
+<!--Arkuz stylów odpowiadający za wygląd tabeli-->
+<style>
+    table {
+        width: 100%;
+        margin: auto;
+    }
+
+    thead th, tfoot th {
+        text-align: left;
+        background: #b200ff;
+        color: white;
+    }
+
+    tbody th {
+        text-align: right;
+        background: #ff00dc;
+        color: white;
+    }
+
+    caption {
+        font-size: larger;
+        color:purple;
+    }
+
+    #zawart {
+        background-color: white;
+        color: black;
+    }
+</style>
+
+<table>
+
+    <!--Tabela przedstawiająca grafik zajęć w fitness clubie-->
+    <caption>
+        <h3>Grafik zajęć</h3>
+    </caption>
+    <thead>
+        <tr>
+            <th></th>
+            <th scope="col">Poniedziałek</th>
+            <th scope="col">Wtorek</th>
+            <th scope="col">Środa</th>
+            <th scope="col">Czwartek</th>
+            <th scope="col">Piątek</th>
+            <th scope="col">Sobota</th>
+            <th scope="col">Niedziela</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">10:00-11:30</th>
+            <td>Joga</td>
+            <td>Pilates</td>
+            <td>Joga</td>
+            <td>Pilates</td>
+            <td>Power Pump</td>
+            <td>Joga</td>
+            <td>Ab Workout</td>
+        </tr>
+        <tr>
+            <th scope="row">12:00-13:30</th>
+            <td>Power Pump</td>
+            <td>Joga</td>
+            <td>Ab Workout</td>
+            <td>Kettlebells</td>
+            <td>ABT</td>
+            <td>Zdrowy kręgosłup</td>
+            <td>ABT</td>
+        </tr>
+        <tr>
+            <th scope="row">15:00-16:30</th>
+            <td>Kettlebells</td>
+            <td>ABT</td>
+            <td>Zdrowy kręgosłup</td>
+            <td>ABT</td>
+            <td>Ab Workout</td>
+            <td>Joga</td>
+            <td>Ab Workout</td>
+        </tr>
+        <tr>
+            <th scope="row">17:00-18:30</th>
+            <td>Stretching</td>
+            <td>Power Pump</td>
+            <td>Zdrowy kręgosłup</td>
+            <td>ABT</td>
+            <td>Power Pump</td>
+            <td>Joga</td>
+            <td>Ab Workout</td>
+        </tr>
+        <tr>
+            <th scope="row">19:00-20:30</th>
+            <td>Ab Workout</td>
+            <td>Joga</td>
+            <td>Ab Workout</td>
+            <td>Joga</td>
+            <td>Pilates</td>
+            <td>Joga</td>
+            <td>Pilates</td>
+
+        </tr>
+    </tbody>
+</table>

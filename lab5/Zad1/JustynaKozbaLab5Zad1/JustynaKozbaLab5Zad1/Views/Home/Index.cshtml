@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="jumbotron text-center">
+    <h1>Fitness club</h1>
+    <!--Utworzenie listy, satnowiącej menu strony po kliknięciu w tekst przechodzimy w odpowiedni widok-->
+    <ul>
+        <li>@Html.ActionLink("O nas", "Exercise1", "Home")</li>
+        <li>@Html.ActionLink("Grafik zajęć", "Exercise2", "Home")</li>
+        <li>@Html.ActionLink("Zdjęcia", "Exercise3", "Home")</li>
+        <li>@Html.ActionLink("Cennik", "Exercise4", "Home")</li>
+        <li>@Html.ActionLink("Logowanie", "Exercise5", "Home")</li>
+    </ul>
+
+    <!--Wstawienie obrazka na stronę-->
+    <img src="~/Content/Images/gym.jpg" />
+</div>
