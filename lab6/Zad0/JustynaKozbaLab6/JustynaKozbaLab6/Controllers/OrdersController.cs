@@ -11,6 +11,10 @@ namespace JustynaKozbaLab6.Controllers
 {
     public class OrdersController : ApiController
     {
+        /// <summary>
+        /// Wygenerowano automatycznie metody Web Api z funkcjami zapisu i odczytu
+        /// </summary>
+        /// <returns></returns>
         // GET: api/Orders
         public IEnumerable<OrderDto> Get()
         {
