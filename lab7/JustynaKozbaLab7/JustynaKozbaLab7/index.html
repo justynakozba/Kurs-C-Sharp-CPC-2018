@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<!--Część odpowiedzialna za emelenty konfiguracyjne-->
+<head>
+    <!--Ustawienie kodowania strony www-->
+    <meta charset="utf-8" />
+    <!--Dołączenie pliku ze stylami-->
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+
+    <title></title>
+</head>
+<!--Część odpowiedzialna za przechowywanie informacji-->
+<body id="all-elements" class="main-background">
+    <header>
+        <!--Dodanie obrazka dla baneru-->
+        <img src="Images/banner.jpg" id="banner-element" alt="banner" onclick="changeBanner()" />
+    </header>
+    <nav></nav>
+    <section>
+        <div id="text-information" onclick="changeFooterTextAndColor()" >
+            text
+            <p>Sample text</p>
+        </div>
+        <div id="photo-information">
+            <!--Dodanie linku do elementu-->
+            <a href="https://pl.wikipedia.org/wiki/Tatry" target="_blank">
+               <img src="Images/góry2.jpg" style="margin-top:10px; margin-left:10px;" />
+            </a>
+            
+        </div>
+    </section>
+    <footer id="footer-block"></footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

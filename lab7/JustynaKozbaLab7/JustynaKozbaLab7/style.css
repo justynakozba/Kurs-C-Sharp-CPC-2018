@@ -1,0 +1,46 @@
+﻿body {
+
+}
+/*Ustawienia nagłówka strony*/
+header{
+    height: 200px;
+    width: 1200px;
+    background-color: coral;
+    text-align: center;
+}
+
+header img{
+    height:200px;
+    width:1000px;
+}
+/*Ustawienia elementu nawigacyjnego */
+nav {
+    height: 100px;
+    width: 1200px;
+    background-color: aquamarine;
+}
+/*Ustawienia elementółw sekcyjnych*/
+section {
+    height: 400px;
+    width: 1200px;
+    background-color: lightpink;
+}
+/*Ustawienia stopki strony www*/
+footer {
+    height: 50px;
+    width: 1200px;
+    background-color: blueviolet;
+}
+#text-information{
+    width: 50%;
+    height: 300px;
+    float: left;
+    background-color:crimson;
+}
+#photo-information {
+    width: 50%;
+    height: 300px;
+    float: right;
+    background-color: yellowgreen;
+
+}
