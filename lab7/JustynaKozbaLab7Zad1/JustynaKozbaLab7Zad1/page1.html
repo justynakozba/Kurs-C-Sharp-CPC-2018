@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Moja strona internetowa</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/time.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <p>
+            Nawigacja:
+            <a href="page1.html"><b>strona 1</b></a> |
+            <a href="page2.html"><b>strona 2</b></a> |
+            <a href="page3.html"><b>strona 3</b></a> |
+        </p>
+    </header>
+
+    <nav>
+        <div id="left">
+            <a href="index.html" title="strona głowna">&lt;&lt;</a>
+        </div>
+        <div id="middle">
+            <a href="index.html" title="strona główna">strona główna</a>
+        </div>
+        <div id="right">
+            <a href="page2.html" title="strona 2">&gt;&gt;</a>
+        </div>
+        <div class="clear"></div>
+    </nav>
+
+    <section>
+        <p>
+            Moja pierwsza strona
+        </p>
+        <div id="photo-information">
+            <!--Dodanie linku do elementu-->
+            <a href="https://pl.wikipedia.org/wiki/Tatry" target="_blank">
+                <img src="Images/góry1.jpg" style="margin-top:10px; margin-left:10px;" />
+            </a>
+
+        </div>
+    </section>
+
+
+
+    <footer id="footer-block">
+        <aside class="footer-box-left">
+            Data i czas: <span id="clock"></span>
+            <br />
+            Aktualizacja: <span id="modyf"></span>
+        </aside>
+    </footer>
+
+</body>
+</html>

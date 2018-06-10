@@ -1,0 +1,176 @@
+﻿body {
+    width: 85%;
+    background-color: aliceblue;
+    color: black;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: 'Lato', sans-serif;
+    border: 2px solid #567889;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 10px 10px 10px -6px rgba(86,120,137,1);
+}
+
+/*Ustawienia nagłówka strony*/
+header {
+    height: 50px;
+    background-color: hotpink;
+    text-align: center;
+    border-bottom: solid 2px #567889;
+    padding-bottom: 10px;
+}
+
+section {
+    min-height: 270px;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    border-bottom: solid 2px #567889;
+}
+
+    section header {
+        text-align: center;
+    }
+
+h2 {
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 0;
+}
+
+/*Ustawienia nawigacji strony*/
+nav {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 1.0em;
+}
+
+    nav a {
+        color: #e8e4e4;
+        display: block;
+        padding: 10px 20px;
+        background: #4F4F4F;
+        text-decoration: none;
+    }
+
+    nav a:visited {
+        color: #e8e4e4;
+    }
+
+    nav a:hover {
+        background: #2f2f2f;
+    }
+
+    nav a:active {
+        background: #0f0f0f;
+    }
+
+    nav #left {
+        float: left;
+        width: 20%;
+        text-align: center;
+    }
+
+    #left a {
+        border-radius: 50px 0 0 50px;
+    }
+
+    nav #middle {
+        float: left;
+        width: 60%;
+        text-align: center;
+    }
+
+    #middle a {
+        border-left: 1px solid #DBDBDB;
+        border-right: 1px solid #DBDBDB;
+    }
+
+    nav #right {
+        float: left;
+        width: 20%;
+        text-align: center;
+    }
+
+    #right a{
+        border-radius: 0 50px 50px 0;
+    }
+
+/*Ustawienia zawartości strony*/
+ 
+
+article {
+    text-align: justify;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+article p {
+    margin-left: 25px;
+}
+
+h3 {
+    color: #105171;
+    padding: 5px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #105171;
+}
+
+    a:hover {
+        color: #666666;
+    }
+
+    a:active {
+        color: silver;
+    }
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 3px;
+}
+
+.clear {
+    clear: both;
+}
+
+textarea {
+    width: 80%;
+    height: 50px;
+}
+    input:hover, input:focus, textarea:hover, textarea:active, textarea:focus {
+        box-shadow: 0px 0px 8px 1px rgba(105,123,212,0.9);
+    }
+
+
+
+/*Ustawienia stopki*/
+footer {
+    font-size: .8em;
+    text-align: right;
+    padding: 5px;
+    background: silver;
+    margin-bottom: 5px;
+}
+
+.footer-box-left {
+    float: left;
+    margin-left: 5px;
+    padding: 5px;
+    text-align: left;
+}
+
+time {
+    border: thin solid #FF4500;
+    padding: 1px;
+}
+
+
+
