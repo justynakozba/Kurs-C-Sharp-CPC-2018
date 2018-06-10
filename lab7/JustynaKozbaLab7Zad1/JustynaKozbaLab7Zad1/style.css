@@ -1,11 +1,12 @@
-﻿body {
+﻿/*Główne ustawienia wyglądu strony*/
+body {
     width: 85%;
     background-color: aliceblue;
     color: black;
     margin: auto;
     margin-top: 2%;
     margin-bottom: 2%;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Playfair Display', serif;
     border: 2px solid #567889;
     border-radius: 15px;
     padding: 30px;
@@ -15,7 +16,7 @@
 /*Ustawienia nagłówka strony*/
 header {
     height: 50px;
-    background-color: hotpink;
+    background-color: cornflowerblue;
     text-align: center;
     border-bottom: solid 2px #567889;
     padding-bottom: 10px;
@@ -26,6 +27,7 @@ section {
     padding-left: 30px;
     margin-bottom: 15px;
     border-bottom: solid 2px #567889;
+    text-align: center;
 }
 
     section header {
@@ -98,7 +100,6 @@ nav {
 
 /*Ustawienia zawartości strony*/
  
-
 article {
     text-align: justify;
     padding-bottom: 5px;
@@ -172,5 +173,59 @@ time {
     padding: 1px;
 }
 
+/*Obracanie zdjęć do strony 2*/
+#photo1 {
+    width: 300px;
+    height: 200px;
+    border: solid black 3px;
+}
 
+    #photo1:hover {
+        transform: rotate(360deg);
+        transition: all ease 1s;
+    }
 
+#photo2 {
+    width: 300px;
+    height: 200px;
+    border: solid black 3px;
+}
+
+    #photo2:hover {
+        transform: rotate(180deg);
+        transition: all ease 1s;
+    }
+
+#photo3 {
+    width: 300px;
+    height: 200px;
+    border: solid black 3px;
+}
+
+    #photo3:hover {
+        transform: rotate(90deg);
+        transition: all ease 1s;
+    }
+
+ /*Ustawienia wyglądu przycisku*/
+#ob1 {
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+/*Ustawienie podziału strony 3*/
+#text-information {
+    width: 50%;
+    height: 200px;
+    float: left;
+    background-color: lightcyan;
+}
+
+#picture-information {
+    width: 50%;
+    height: 200px;
+    float: right;
+    background-color: lightpink;
+}

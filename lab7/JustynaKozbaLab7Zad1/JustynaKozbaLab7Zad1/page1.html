@@ -1,15 +1,18 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <!--Ustawienie kodowania strony www-->
     <meta charset="utf-8" />
     <title>Moja strona internetowa</title>
+    <!--Dołączenie pliku ze stylami-->
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="scripts/time.js" defer></script>
-    <script src="scripts/script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!--Dołączenie fontu z googleapis-->
+    <link href="https://fonts.googleapis.com/css?family=Lora|Playfair+Display" rel="stylesheet">
 
 </head>
+<!--Część odpowiedzialna za przechowywanie informacji-->
 <body>
+    <!--Nagłówek strony z nawigacją-->
     <header>
         <p>
             Nawigacja:
@@ -19,6 +22,7 @@
         </p>
     </header>
 
+    <!--Część odpowiedzialna za nawigowanie-->
     <nav>
         <div id="left">
             <a href="index.html" title="strona głowna">&lt;&lt;</a>
@@ -32,21 +36,23 @@
         <div class="clear"></div>
     </nav>
 
+    <!--Dodanie głownej zawartości strony internetowej-->
     <section>
-        <p>
+        <h1>
             Moja pierwsza strona
+        </h1>
+        <p>
+            Kliknij aby dowiedzieć się wiecej o zdjęciu
         </p>
         <div id="photo-information">
             <!--Dodanie linku do elementu-->
             <a href="https://pl.wikipedia.org/wiki/Tatry" target="_blank">
-                <img src="Images/góry1.jpg" style="margin-top:10px; margin-left:10px;" />
+                <img src="Images/góry1.jpg" style="margin-top:10px; margin-left:10px; border-width: 5px; border-style: solid; border-color: cornflowerblue; text-align: center;" />
             </a>
-
         </div>
     </section>
 
-
-
+    <!--Dodanie stopki do strony internetowej-->
     <footer id="footer-block">
         <aside class="footer-box-left">
             Data i czas: <span id="clock"></span>
@@ -55,5 +61,8 @@
         </aside>
     </footer>
 
+    <!--Dodanie plików ze skryptami-->
+    <script src="scripts/time.js" defer></script>
+    <script src="scripts/changeColor.js" defer></script>
 </body>
 </html>

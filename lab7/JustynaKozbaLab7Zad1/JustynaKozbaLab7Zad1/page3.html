@@ -1,12 +1,67 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <!--Ustawienie kodowania strony www-->
     <meta charset="utf-8" />
-    <title></title>
+    <title>Moja strona internetowa</title>
+    <!--Dołączenie pliku ze stylami-->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!--Dołączenie fontu z googleapis-->
+    <link href="https://fonts.googleapis.com/css?family=Lora|Playfair+Display" rel="stylesheet">
 </head>
-
 <body>
-    
+    <!--Nagłówek strony z nawigacją-->
+    <header>
+        <p>
+            Nawigacja:
+            <a href="page1.html"><b>strona 1</b></a> |
+            <a href="page2.html"><b>strona 2</b></a> |
+            <a href="page3.html"><b>strona 3</b></a> |
+        </p>
+    </header>
 
+    <!--Część odpowiedzialna za nawigowanie-->
+    <nav>
+        <div id="left">
+            <a href="page2.html" title="strona 2">&lt;&lt;</a>
+        </div>
+        <div id="middle">
+            <a href="index.html" title="strona główna">strona główna</a>
+        </div>
+        <div id="right">
+            <a href="#" id="kursor" onclick="event.preventDefault()" title="brak następnej!">&lt;&lt;</a>
+        </div>
+        <div class="clear"></div>
+    </nav>
+
+    <!--Dodanie głownej zawartości strony internetowej-->
+    <section>
+        <h1>
+            Moja trzecia strona
+        </h1>
+        <h2> Demo prostych obliczeń </h2>
+        <!--Dodanie przycisku umożliwiającego proste obliczenia-->
+        <div id="text-information">
+            <input id="ob1" type="button" value="Kliknij, aby wprowadzić wartości" style="margin-top:40px;margin-left:10px; width:200px; height:100px;" />
+        </div>
+        <!--Dodanie obrazka na stronie-->
+        <div id="picture-information">
+            <img src="Images/dodawanie.png" alt="obrazek1" style="margin-top:40px;margin-left:10px; width:200px; height:100px;" />
+        </div>
+    </section>
+
+    <!--Dodanie stopki do strony internetowej-->
+    <footer id="footer-block">
+        <aside class="footer-box-left">
+            Data i czas: <span id="clock"></span>
+            <br />
+            Aktualizacja: <span id="modyf"></span>
+        </aside>
+    </footer>
+
+    <!--Dodanie plików ze skryptami-->
+    <script src="scripts/time.js" defer></script>
+    <script src="scripts/changeColor.js" defer></script>
+    <script src="scripts/calculations.js" defer></script>
 </body>
 </html>

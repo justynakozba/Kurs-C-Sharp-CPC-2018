@@ -67,12 +67,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\dodawanie.jpg" />
+    <Content Include="Images\dodawanie.png" />
     <Content Include="Images\góry1.jpg" />
+    <Content Include="Images\obrazek1.jpg" />
+    <Content Include="Images\obrazek2.jpg" />
+    <Content Include="Images\obrazek3.jpg" />
     <Content Include="index.html" />
     <Content Include="page1.html" />
     <Content Include="page2.html" />
     <Content Include="page3.html" />
-    <Content Include="scripts\script.js" />
+    <Content Include="scripts\calculations.js" />
+    <Content Include="scripts\changeColor.js" />
     <Content Include="scripts\time.js" />
     <Content Include="style.css" />
     <Content Include="Web.config" />
