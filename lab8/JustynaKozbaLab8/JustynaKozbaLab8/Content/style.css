@@ -1,0 +1,19 @@
+﻿/*Ustawienia dla elementu głównego*/
+body {
+    background-color: yellowgreen;
+    color: blue;
+}
+
+header{
+    text-align:center;
+}
+
+#photo1 {
+    width: 300px;
+    height: 200px;
+    border: solid black 3px;
+    text-align:center;
+}
+
+
+
