@@ -1,19 +1,41 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<!--Zdefiniowanie stylów na stronie głównej-->
+<style>
+    body{
+        background-color:lavenderblush;
+        text-align:center;
+    }
+    div {
+        color: blue;
+        font-size: large;
+    }
+
+    canvas {
+        border: 1px solid #d3d3d3;
+        background-color: pink;
+    }
+
+</style>
 
 <body>
     <br>
+    <!--Zdefiniowanie działania przycisku umożliwiającego grę-->
     <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
     <p>Use the ACCELERATE button to stay in the air</p>
     <p>How long can you stay alive?</p>
     <br />
+    <!--Zdefiniowanie przycisku umożliwiającego rozpoczęcie gry-->
     <button onclick="startGame()" style="color:red">Click to start a game</button>
+    <br />
+    <!--Zdefiniowanie odnośników umożliwiających zapisywanie danych w tabeli-->
     <div class="row">
-        @Html.ActionLink("Dodaj użytkownika", "Index", "JustynaKozbaUsers");
-        @Html.ActionLink("Zapisz wynik", "Index", "JustynaKozbaScore");
+        @Html.ActionLink("Add user", "Index", "JustynaKozbaUsers")
+        <br />
+        @Html.ActionLink("Save score", "Index", "JustynaKozbaScores")
     </div>
-
+    <!--Odnośnik do skryptu gdzie zaprogramowana jest gra -->
     <script src="~/Scripts/script.js"></script>
 </body>
 

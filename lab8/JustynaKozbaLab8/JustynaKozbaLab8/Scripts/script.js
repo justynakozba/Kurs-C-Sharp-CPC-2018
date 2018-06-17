@@ -1,4 +1,4 @@
-﻿/*Funkcja zmieniająca kolory stopki*/
+﻿ /*Funkcja zmieniająca kolory stopki*/
 var counter = 1;
 function changeColor() {
 

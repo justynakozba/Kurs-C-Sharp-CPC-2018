@@ -1,12 +1,17 @@
-﻿body {
-    background-color: aliceblue;
-    color: blue;
+﻿
+body {
+    background-color: lavenderblush;
+    text-align: center;
 }
 
+div {
+    color: blue;
+    font-size: large;
+}
 
 canvas {
     border: 1px solid #d3d3d3;
     background-color: #f1f1f1;
 }
 
-    
+

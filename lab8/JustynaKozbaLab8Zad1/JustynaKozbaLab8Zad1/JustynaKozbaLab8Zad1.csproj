@@ -144,6 +144,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JustynaKozbaScoresController.cs" />
     <Compile Include="Controllers\JustynaKozbaUsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -179,6 +180,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\score.png" />
+    <Content Include="Images\users.jpg" />
     <Content Include="Models\UsersData.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>UsersData.edmx</DependentUpon>
@@ -229,6 +232,11 @@
     <Content Include="Views\JustynaKozbaUsers\Details.cshtml" />
     <Content Include="Views\JustynaKozbaUsers\Edit.cshtml" />
     <Content Include="Views\JustynaKozbaUsers\Index.cshtml" />
+    <Content Include="Views\JustynaKozbaScores\Create.cshtml" />
+    <Content Include="Views\JustynaKozbaScores\Delete.cshtml" />
+    <Content Include="Views\JustynaKozbaScores\Details.cshtml" />
+    <Content Include="Views\JustynaKozbaScores\Edit.cshtml" />
+    <Content Include="Views\JustynaKozbaScores\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

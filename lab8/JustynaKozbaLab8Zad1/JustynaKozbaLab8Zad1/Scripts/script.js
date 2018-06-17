@@ -3,13 +3,15 @@ var myGamePiece;
 var myObstacles = [];
 var myScore;
 
+/*Funkcja startująca grę*/
 function startGame() {
-                    myGamePiece = new component(30, 30, "red", 10, 120);
+                    myGamePiece = new component(30, 30, "blue", 10, 120);
                 myGamePiece.gravity = 0.05;
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
 }
 
+/*Definicja zmiennej określającej obszar gry*/
 var myGameArea = {
                     canvas : document.createElement("canvas"),
     start : function() {
@@ -25,6 +27,15 @@ var myGameArea = {
                 }
 }
 
+/**
+ * Definicja komponentów gry
+ * @param {any} width
+ * @param {any} height
+ * @param {any} color
+ * @param {any} x
+ * @param {any} y
+ * @param {any} type
+ */
 function component(width, height, color, x, y, type) {
                     this.type = type;
                 this.score = 0;
@@ -47,12 +58,16 @@ function component(width, height, color, x, y, type) {
                 ctx.fillRect(this.x, this.y, this.width, this.height);
         }
     }
-    this.newPos = function() {
+
+    /*Definicja pozycji */
+    this.newPosition = function() {
                     this.gravitySpeed += this.gravity;
                 this.x += this.speedX;
         this.y += this.speedY + this.gravitySpeed;
         this.hitBottom();
     }
+
+    /*Definicja użycia przycisku w grze */
     this.hitBottom = function() {
         var rockbottom = myGameArea.canvas.height - this.height;
         if (this.y > rockbottom) {
@@ -60,6 +75,8 @@ function component(width, height, color, x, y, type) {
                 this.gravitySpeed = 0;
         }
     }
+
+    /*Definicja zderzenia kwadratu ze słupkami w grze */
     this.crashWith = function(otherobj) {
         var myleft = this.x;
         var myright = this.x + (this.width);
@@ -77,6 +94,7 @@ function component(width, height, color, x, y, type) {
     }
 }
 
+/*Definicja zaktualizowania pola gry */
 function updateGameArea() {
     var x, height, gap, minHeight, maxHeight, minGap, maxGap;
     for (i = 0; i < myObstacles.length; i += 1) {
@@ -86,7 +104,7 @@ function updateGameArea() {
     }
     myGameArea.clear();
     myGameArea.frameNo += 1;
-    if (myGameArea.frameNo == 1 || everyinterval(150)) {
+    if (myGameArea.frameNo == 1 || everyInterval(150)) {
                     x = myGameArea.canvas.width;
                 minHeight = 20;
         maxHeight = 200;
@@ -94,8 +112,8 @@ function updateGameArea() {
         minGap = 50;
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        myObstacles.push(new component(10, height, "green", x, 0));
-        myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
+        myObstacles.push(new component(10, height, "deeppink", x, 0));
+        myObstacles.push(new component(10, x - height - gap, "deeppink", x, height + gap));
     }
     for (i = 0; i < myObstacles.length; i += 1) {
                     myObstacles[i].x += -1;
@@ -103,15 +121,20 @@ function updateGameArea() {
     }
     myScore.text="SCORE: " + myGameArea.frameNo;
     myScore.update();
-    myGamePiece.newPos();
+    myGamePiece.newPosition();
     myGamePiece.update();
 }
 
-function everyinterval(n) {
+/**
+ * Definicja odległości każdego elementu
+ * @param {any} n
+ */
+function everyInterval(n) {
     if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
     return false;
 }
 
+/* Definicja przyspieszenia w grze */
 function accelerate(n) {
                     myGamePiece.gravity = n;
                 }

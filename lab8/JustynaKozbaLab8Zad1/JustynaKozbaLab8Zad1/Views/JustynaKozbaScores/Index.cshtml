@@ -1,4 +1,4 @@
-﻿@model IEnumerable<JustynaKozbaLab8Zad1.Models.JustynaKozbaUsers>
+﻿@model IEnumerable<JustynaKozbaLab8Zad1.Models.JustynaKozbaScore>
 
 @{
     ViewBag.Title = "Index";
@@ -11,11 +11,11 @@
     }
 </style>
 
-<h2>Users</h2>
+<h2>Score</h2>
 
 <!--Dodanie obrazka na górze strony-->
 <div>
-    <img src="~/Images/users.jpg" style="text-align:center; " />
+    <img src="~/Images/score.png" style="text-align:center; " />
 </div>
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -26,14 +26,9 @@
             @Html.DisplayNameFor(model => model.Login)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.Score)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Surname)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Password)
-        </th>
+
         <th></th>
     </tr>
 
@@ -44,13 +39,10 @@
                 @Html.DisplayFor(modelItem => item.Login)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
+                @Html.DisplayFor(modelItem => item.Score)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Surname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Password)
+                @Html.DisplayFor(modelItem => item.JustynaKozbaScore2.Login)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
