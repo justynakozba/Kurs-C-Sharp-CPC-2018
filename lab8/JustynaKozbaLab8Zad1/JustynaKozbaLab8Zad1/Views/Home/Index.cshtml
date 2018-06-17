@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<body>
+    <br>
+    <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
+    <p>Use the ACCELERATE button to stay in the air</p>
+    <p>How long can you stay alive?</p>
+    <br />
+    <button onclick="startGame()" style="color:red">Click to start a game</button>
+    <div class="row">
+        @Html.ActionLink("Dodaj użytkownika", "Index", "JustynaKozbaUsers");
+        @Html.ActionLink("Zapisz wynik", "Index", "JustynaKozbaScore");
+    </div>
+
+    <script src="~/Scripts/script.js"></script>
+</body>
+
