@@ -1,0 +1,14 @@
+﻿body {
+}
+
+/*Defionowanie wyglądu tekstu zawartego w paragrafie*/
+p{
+    color:blue;
+    font-size:x-large;
+    background-color:pink;
+}
+
+/*Definiowanie wyglądu elementu zdefionowanego jako nagłówek strony*/
+h{
+    background-color:aquamarine;
+}
